@@ -9,7 +9,7 @@ client_public_key = client_private_key.publickey()
 print(f"Client Public Key:\n{client_public_key.export_key().decode()}")
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client_socket.connect(('localhost', 12345))
+client_socket.connect(('localhost', 9999))
 
 
 server_public_key = RSA.import_key(client_socket.recv(1024))
